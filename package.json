@@ -1,5 +1,5 @@
 {
-  "name": "ts-ci-test",
+  "name": "ts-test",
   "version": "1.0.0",
   "main": "index.ts",
   "license": "MIT",
@@ -8,8 +8,8 @@
     "typescript": "^5.1.3"
   },
   "scripts": {
-    "ci:install": "yarn install --immutable --immutable-cache",
-    "lint:typecheck": "tsc --noEmit",
+    "ci:install": "yarn install --immutable --immutable-cache --check-cache",
+    "typecheck": "tsc --noEmit",
     "build": "tsc"
   },
   "packageManager": "yarn@3.6.0",
