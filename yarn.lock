@@ -1310,9 +1310,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-ci-test@workspace:.":
+"ts-test@workspace:.":
   version: 0.0.0-use.local
-  resolution: "ts-ci-test@workspace:."
+  resolution: "ts-test@workspace:."
   dependencies:
     tsx: ^3.12.7
     typescript: ^5.1.3
