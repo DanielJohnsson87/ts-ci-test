@@ -5,4 +5,8 @@ function test(s: string): string {
   return a;
 }
 
+function thisShouldFail(value: number) {
+  return value.toLocaleLowerCase();
+}
+
 export { test };
