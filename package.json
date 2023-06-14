@@ -11,5 +11,8 @@
     "ci:install": "yarn install --frozen-lockfile",
     "typecheck": "tsc --noEmit",
     "build": "tsc"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
   }
 }
