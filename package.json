@@ -12,5 +12,8 @@
     "lint:typecheck": "tsc --noEmit",
     "build": "tsc"
   },
-  "packageManager": "yarn@3.6.0"
+  "packageManager": "yarn@3.6.0",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
 }
