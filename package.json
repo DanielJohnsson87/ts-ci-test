@@ -11,6 +11,5 @@
     "ci:install": "yarn install --immutable --immutable-cache --check-cache",
     "typecheck": "tsc --noEmit",
     "build": "tsc"
-  },
-  "packageManager": "yarn@3.6.0"
+  }
 }
