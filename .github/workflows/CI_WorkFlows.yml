@@ -1,0 +1,29 @@
+name: CI
+
+on: [pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout commit
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "18.x"
+
+      - name: Cache Yarn # leverage yarn cache on repeated workflow runs if package.json didn't change
+        uses: actions/cache@v3
+        with:
+          path: ~/.yarn
+          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install Dependencies
+        run: yarn ci:install
+
+      - name: Run linter
+        run: yarn lint:typecheck
